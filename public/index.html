@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>High Seas</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <button id="newGame">New Game</button>
+  <div id="playerCreation">
+    <label for="name">Captain:</label>
+    <input id="playerName" name="name" type="text">
+    <label for="faction-select">Choose a faction:</label>
+    <select name="faction-select" id="faction-select">
+      <option value="NONE" disabled selected>--Choose an option--</option>
+      <option value="ENG">England</option>
+      <option value="FRN">France</option>
+      <option value="ESP">Spain</option>
+      <option value="NET">Netherlands</option>
+      <option value="DEN">Denmark</option>
+      <option value="PIR">Pirate</option>
+    </select>
+    <div style="display: inline;">
+      <button id="cancelNew">Cancel</button>
+      <button id="startGame">Start</button>
+    </div>
+    <br>
+    <p style="display: none;" id="playerCreateError"></p>
+  </div>
+  <div style="display: none;" id="gameView">
+    <label for="captain">Captain:</label>
+    <p id="pName"></p>
+  </div>
+  <script src="index.js" type="module"></script>
+</body>
+</html>
