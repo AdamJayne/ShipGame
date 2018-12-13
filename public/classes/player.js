@@ -7,4 +7,8 @@ class Player {
   }
 }
 
+Player.prototype.addShip = function (ship) {
+  this.ship = ship;
+}
+
 export default Player;

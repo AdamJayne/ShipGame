@@ -15,12 +15,9 @@
     <label for="faction-select">Choose a faction:</label>
     <select name="faction-select" id="faction-select">
       <option value="NONE" disabled selected>--Choose an option--</option>
-      <option value="ENG">England</option>
-      <option value="FRN">France</option>
-      <option value="ESP">Spain</option>
-      <option value="NET">Netherlands</option>
-      <option value="DEN">Denmark</option>
-      <option value="PIR">Pirate</option>
+      <option value="England">England</option>
+      <option value="France">France</option>
+      <option value="Spain">Spain</option>
     </select>
     <div style="display: inline;">
       <button id="cancelNew">Cancel</button>
@@ -30,8 +27,22 @@
     <p style="display: none;" id="playerCreateError"></p>
   </div>
   <div style="display: none;" id="gameView">
-    <label for="captain">Captain:</label>
-    <p id="pName"></p>
+    <p>Captain: </p><p id="pName"></p>
+    <br>
+    <p>Faction: </p><p id="pFaction"></p>
+    <div style="display: none;" id="shipSelect">
+      <label for="ship">Select a ship</label>
+      <select name="ship" id="shipInput">
+        <option value="Brig">Brig</option>
+        <option value="Galleon">Galleon</option>
+        <option value="ShipOfTheLine">Ship of the line</option>
+      </select>
+      <label for="shipName">Name your ship</label>
+      <input type="text" name="shipName" id="shipNameInput">
+      <button id="submitShipCreate">Create Ship</button>
+      <br>
+      <p style="display: none;" id="shipNameError"></p>
+    </div>
   </div>
   <script src="index.js" type="module"></script>
 </body>
