@@ -26,10 +26,43 @@
     <br>
     <p style="display: none;" id="playerCreateError"></p>
   </div>
+
+  <!-- Main Game Display -->
   <div style="display: none;" id="gameView">
-    <p>Captain: </p><p id="pName"></p>
-    <br>
-    <p>Faction: </p><p id="pFaction"></p>
+    <div id="pName"></div>
+    <div id="pFaction"></div>
+    <div id="myShipView"></div>
+    <!-- <div id="battleSelection">
+      <label for="battleSelect">Select type of theatre</label>
+      <div>
+        <input type="radio" name="theatre" id="combatPatrol" value="patrol">
+        <label for="combatPatrol">Patrol</label>
+
+        <input type="radio" name="theatre" id="combatBattle">
+        <label for="combatBattle">Battle/label>
+
+      </div>
+    </div> -->
+
+    <div id="battleview">
+      <div style="display: none;" id="battleIntro">
+        
+      </div>
+      <div style="display: none;" id="combat">
+        <div id="battle-my-ship">
+          <label for="playerHealth">My Ship</label>
+          <progress id="playerHealth" value="0"></progress>
+        </div>
+        <br>
+        <div id="battle-enemy-ship">
+          <label for="enemyHealth">Enemy Ship</label>
+          <progress id="enemyHealth" value="0"></progress>
+        </div>
+        <button id="fireVolly">Fire Guns!</button>
+      </div>
+    </div>
+
+    <!-- Ship Selection Menu -->
     <div style="display: none;" id="shipSelect">
       <label for="ship">Select a ship</label>
       <select name="ship" id="shipInput">
@@ -43,7 +76,20 @@
       <br>
       <p style="display: none;" id="shipNameError"></p>
     </div>
+
+
   </div>
+
+  <!-- Death screen -->
+  <div style="display: none;" id="youDied">
+    <h1>Your ship has sunk!</h1>
+  </div>
+
+  <!-- Victory Screen -->
+  <div style="display: none;" id="youWin">
+    <h1>You have sunk the enemy ship!</h1>
+  </div>
+
   <script src="index.js" type="module"></script>
 </body>
 </html>
